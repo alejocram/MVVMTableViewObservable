@@ -14,7 +14,9 @@ class PhotoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Photo List"
         self.tableView.dataSource = self
+        self.tableView.delegate = self
         initVM()
     }
     
@@ -53,6 +55,16 @@ extension PhotoViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
         cell.title.text = self.viewModel.photos.value[indexPath.row].name
         return cell
+    }
+}
+
+extension PhotoViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.viewModel.photoSelected(at: indexPath)
+        let controller = storyboard?.instantiateViewController(withIdentifier: "PhotoDetailViewController") as! PhotoDetailViewController
+        let photo = self.viewModel.photos.value[indexPath.row]
+        controller.viewModel.photo.value = photo
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 
