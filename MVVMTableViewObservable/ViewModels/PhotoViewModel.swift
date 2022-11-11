@@ -22,6 +22,6 @@ final class PhotoViewModel {
     }
     
     func photoSelected(at indexPath: IndexPath) {
-        let photo = photos.value[indexPath.row]
+        PhotoService.shared.setPhotoSelected(indexPath: indexPath)
     }
 }

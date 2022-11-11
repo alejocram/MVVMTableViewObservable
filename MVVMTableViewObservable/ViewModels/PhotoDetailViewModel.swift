@@ -9,4 +9,8 @@ import Foundation
 
 final class PhotoDetailViewModel {
     var photo: ObservableObject<Photo?> = ObservableObject(nil)
+    
+    func getPhotoDetail() {
+        photo.value = PhotoService.shared.getPhotoSelected()
+    }
 }

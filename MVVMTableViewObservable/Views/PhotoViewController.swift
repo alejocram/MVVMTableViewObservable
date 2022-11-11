@@ -62,8 +62,6 @@ extension PhotoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.viewModel.photoSelected(at: indexPath)
         let controller = storyboard?.instantiateViewController(withIdentifier: "PhotoDetailViewController") as! PhotoDetailViewController
-        let photo = self.viewModel.photos.value[indexPath.row]
-        controller.viewModel.photo.value = photo
         navigationController?.pushViewController(controller, animated: true)
     }
 }

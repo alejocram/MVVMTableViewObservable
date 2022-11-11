@@ -18,6 +18,7 @@ class PhotoDetailViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Photo Detail"
         initVM()
+        self.viewModel.getPhotoDetail()
     }
     
     func initVM() {
