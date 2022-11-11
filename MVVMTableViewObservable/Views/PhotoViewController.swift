@@ -8,6 +8,7 @@
 import UIKit
 
 class PhotoViewController: UIViewController {
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var tableView: UITableView!
     
     private let viewModel = PhotoViewModel()
@@ -15,6 +16,7 @@ class PhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Photo List"
+        self.activityIndicator.hidesWhenStopped = true
         self.tableView.dataSource = self
         self.tableView.delegate = self
         initVM()
@@ -30,6 +32,15 @@ class PhotoViewController: UIViewController {
         }
         viewModel.error.bind { error in
             print(error?.localizedDescription)
+        }
+        viewModel.isLoading.bind { [weak self] isLoading in
+            DispatchQueue.main.async {
+                if isLoading {
+                    self?.activityIndicator.startAnimating()
+                } else {
+                    self?.activityIndicator.stopAnimating()
+                }
+            }
         }
         viewModel.getPhotos()
     }

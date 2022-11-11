@@ -21,14 +21,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PhotoCell" id="fFL-30-WLz" customClass="PhotoCell" customModule="MVVMTableViewObservable" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="59"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="58.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fFL-30-WLz" id="aHl-bJ-YsD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="58.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYD-Ky-5Rj">
-                                                    <rect key="frame" x="28" y="19" width="319" height="21"/>
+                                                    <rect key="frame" x="28" y="19" width="319" height="20.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -47,18 +47,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="2T9-Zl-oKR">
+                                <rect key="frame" x="177.66666666666666" y="396" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Enz-hk-cMd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lWd-se-0Gf" firstAttribute="leading" secondItem="Enz-hk-cMd" secondAttribute="leading" id="H92-m9-RA9"/>
                             <constraint firstItem="lWd-se-0Gf" firstAttribute="top" secondItem="Enz-hk-cMd" secondAttribute="top" id="Ka9-jh-cKS"/>
+                            <constraint firstItem="2T9-Zl-oKR" firstAttribute="centerX" secondItem="kyh-Mi-Owm" secondAttribute="centerX" id="Kpc-SY-lbU"/>
                             <constraint firstItem="Enz-hk-cMd" firstAttribute="trailing" secondItem="lWd-se-0Gf" secondAttribute="trailing" id="bIJ-tc-26v"/>
+                            <constraint firstItem="2T9-Zl-oKR" firstAttribute="centerY" secondItem="kyh-Mi-Owm" secondAttribute="centerY" id="mqg-gY-ta3"/>
                             <constraint firstItem="Enz-hk-cMd" firstAttribute="bottom" secondItem="lWd-se-0Gf" secondAttribute="bottom" id="xWA-BF-IOl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a7H-w3-vXi"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="2T9-Zl-oKR" id="Lgc-s4-FlV"/>
                         <outlet property="tableView" destination="lWd-se-0Gf" id="TzZ-eR-x3F"/>
                     </connections>
                 </viewController>

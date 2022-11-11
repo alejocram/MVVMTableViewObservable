@@ -10,14 +10,17 @@ import Foundation
 final class PhotoViewModel {
     var photos: ObservableObject<[Photo]> = ObservableObject([Photo]())
     var error: ObservableObject<Error?> = ObservableObject(nil)
+    var isLoading: ObservableObject<Bool> = ObservableObject(false)
     
     func getPhotos() {
+        self.isLoading.value = true
         PhotoService.shared.getPhotos { [weak self] success, photos, error in
             if success {
                 self?.photos.value = photos
             } else {
                 self?.error.value = error
             }
+            self?.isLoading.value = false
         }
     }
     

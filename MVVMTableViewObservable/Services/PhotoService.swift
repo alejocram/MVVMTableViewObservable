@@ -16,7 +16,7 @@ final class PhotoService {
     
     func getPhotos(complete: @escaping(_ success: Bool, _ photos: [Photo], _ error: Error?) -> ()) {
         DispatchQueue.global().async {
-//            sleep(3)
+            sleep(3)
             let path = Bundle.main.path(forResource: "content", ofType: "json")!
             let data = try! Data(contentsOf: URL(fileURLWithPath: path))
             let decoder = JSONDecoder()
