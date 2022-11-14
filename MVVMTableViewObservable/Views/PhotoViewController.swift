@@ -45,6 +45,11 @@ class PhotoViewController: UIViewController {
         viewModel.getPhotos()
     }
     
+    @IBAction func pressAddButton(_ sender: Any) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "AddPhotoViewController") as! AddPhotoViewController
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

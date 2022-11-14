@@ -20,6 +20,7 @@
 		598C9632291B8D4C003BA461 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C9631291B8D4C003BA461 /* PhotoViewController.swift */; };
 		598C9634291C73E5003BA461 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C9633291C73E5003BA461 /* PhotoDetailViewController.swift */; };
 		598C9636291C76AD003BA461 /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C9635291C76AD003BA461 /* PhotoDetailViewModel.swift */; };
+		598C963829221A65003BA461 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C963729221A65003BA461 /* AddPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		598C9631291B8D4C003BA461 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		598C9633291C73E5003BA461 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		598C9635291C76AD003BA461 /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
+		598C963729221A65003BA461 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				598C9631291B8D4C003BA461 /* PhotoViewController.swift */,
 				598C9633291C73E5003BA461 /* PhotoDetailViewController.swift */,
+				598C963729221A65003BA461 /* AddPhotoViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				598C9632291B8D4C003BA461 /* PhotoViewController.swift in Sources */,
 				598C9630291B88EE003BA461 /* ObservableObject.swift in Sources */,
 				598C960A291AE165003BA461 /* AppDelegate.swift in Sources */,
+				598C963829221A65003BA461 /* AddPhotoViewController.swift in Sources */,
 				598C9634291C73E5003BA461 /* PhotoDetailViewController.swift in Sources */,
 				598C960C291AE165003BA461 /* SceneDelegate.swift in Sources */,
 			);
